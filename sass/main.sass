@@ -30,6 +30,11 @@ button
     padding: 0.8rem 1.5rem
     text-transform: capitalize
 
+h2
+    font-size: 2.25rem
+    font-weight: 600
+    line-height: 2.875rem
+
 .section
     padding: 5rem 0 0 0
 
@@ -42,11 +47,22 @@ button
 
 .grid-two-column
     grid-template-columns: repeat(2,1fr)
+
+.grid-three-column
+    grid-template-rows: 0.5fr 2fr 0.5fr
+    row-gap: 2.604vw
+    column-gap: 2.083vw
+
+.section-aboutus,
+.find-home,
+.comfort
+    padding-top: 10.625rem
+    margin: 0 10rem
 // ---------- header ----------  
 @import "_header.sass"
 
 // hero section
 @import "_hero-section.sass"
 
-// main body about us
+// main body about us and find your home
 @import "_body-aboutus.sass"
