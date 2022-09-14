@@ -263,4 +263,22 @@ button {
 
 .about-us-img {
   width: 100%;
+}
+
+.about-us-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 50px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.about-us-ico {
+  width: 3.385vw;
 }/*# sourceMappingURL=main.css.map */
