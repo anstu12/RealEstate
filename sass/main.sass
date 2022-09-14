@@ -1,5 +1,5 @@
+@use '_var.sass' as var
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500&display=swap')
-@import "_var"
 
 *
     margin: 0
@@ -7,20 +7,11 @@
     box-sizing: border-box
     font-family: "Inter", sans-serif
 
-html
-    font-size: 1.125rem
-
-h1
-    font-family: "Poppins", sans-serif
-    color: $heading
-    font-size: 4rem
-    font-weight: 600
-
 p
-    color: $para
+    color: var.$para
     font-weight: 400
-    size: 1.25px
-    line-height: 30px
+    font-size: 1.4rem
+    line-height: 2rem
 
 a
     text-decoration: none
@@ -28,4 +19,30 @@ a
 li
     list-style: none
 
-@import "_header"
+button
+    background-color: var.$btn-clr
+    border-radius: 11px
+    border-style: none
+    color: #FFF
+    cursor: pointer
+    display: inline-block
+    font-size: 1.2rem
+    font-weight: 500
+    line-height: 2rem
+    padding: 0.8rem 1.5rem
+    text-transform: capitalize
+
+.section
+    padding: 5rem 0
+
+.grid
+    display: grid
+    gap: 5rem
+
+.grid-four-column
+    grid-template-columns: repeat(5,1fr)
+// ---------- header ----------  
+@import "_header.sass"
+
+// hero section
+@import "_hero-section.sass"
