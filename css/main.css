@@ -310,4 +310,23 @@ h2 {
   -ms-flex-item-align: center;
       align-self: center;
   justify-self: center;
+}
+
+.comfort-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.comfort-house {
+  overflow: hidden;
+}
+
+.comfort-head, .comfort-para, .comfort-btn {
+  grid-column: auto/span 2;
 }/*# sourceMappingURL=main.css.map */
