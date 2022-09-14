@@ -46,12 +46,10 @@ h2
     grid-template-columns: repeat(5,1fr)
 
 .grid-two-column
-    grid-template-columns: repeat(2,1fr)
+    grid-template-columns: repeat(2, minmax(250px, 1fr))
 
 .grid-three-column
-    grid-template-rows: 0.5fr 2fr 0.5fr
-    row-gap: 2.604vw
-    column-gap: 2.083vw
+    grid-template-columns: repeat(3,minmax(360px, 1fr))
 
 .section-aboutus,
 .find-home,
@@ -66,3 +64,6 @@ h2
 
 // main body about us and find your home
 @import "_body-aboutus.sass"
+
+//comfort
+@import "_body-bottom.sass"
