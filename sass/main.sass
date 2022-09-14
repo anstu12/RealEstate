@@ -10,8 +10,6 @@
 p
     color: var.$para
     font-weight: 400
-    font-size: 1.4rem
-    line-height: 2rem
 
 a
     text-decoration: none
@@ -33,16 +31,22 @@ button
     text-transform: capitalize
 
 .section
-    padding: 5rem 0
+    padding: 5rem 0 0 0
 
 .grid
     display: grid
     gap: 5rem
 
-.grid-four-column
+.grid-five-column
     grid-template-columns: repeat(5,1fr)
+
+.grid-two-column
+    grid-template-columns: repeat(2,1fr)
 // ---------- header ----------  
 @import "_header.sass"
 
 // hero section
 @import "_hero-section.sass"
+
+// main body about us
+@import "_body-aboutus.sass"
