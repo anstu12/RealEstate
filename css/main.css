@@ -8,7 +8,7 @@
 
 html {
   font-family: "Inter", sans-serif;
-  font-size: clamp(1rem, 0.65rem + 0.6vw, 2rem);
+  font-size: 1.3vw;
   color: #989EA7;
   line-height: 1.2;
 }
@@ -780,11 +780,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+  html {
+    font-size: 1.6vw;
+  }
   .header {
     position: relative;
   }
   .header .logo {
-    width: 40%;
+    font-size: 3em;
+  }
+  .nav-button {
+    visibility: hidden;
   }
   .mobile-navbar-btn {
     display: block;
@@ -803,8 +809,8 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    background: -webkit-gradient(linear, left top, right top, from(rgb(243, 245, 247)), color-stop(50%, rgb(116, 103, 103)), to(rgb(43, 63, 101)));
-    background: linear-gradient(90deg, rgb(243, 245, 247) 0%, rgb(116, 103, 103) 50%, rgb(43, 63, 101) 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(0, 11, 44)), to(rgb(152, 158, 167)));
+    background: linear-gradient(0deg, rgb(0, 11, 44) 0%, rgb(152, 158, 167) 100%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -840,18 +846,7 @@ footer {
     display: block;
   }
   .navbar .navbar-link {
-    color: black;
+    color: #F3F5F7;
     font-size: 2rem;
-  }
-}
-@media (max-width: 800px) {
-  button {
-    padding: 0.5rem;
-    font-size: 0.95rem;
-  }
-}
-@media (max-width: 900px) {
-  .section-hero-bg {
-    grid-column: 1/-1;
   }
 }/*# sourceMappingURL=main.css.map */

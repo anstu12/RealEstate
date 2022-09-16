@@ -3,10 +3,14 @@
 // media queries
 
 @media( max-width: 768px )
+    html
+        font-size: 1.6vw
     .header
         position: relative
         .logo
-            width: 40%
+            font-size: 3em
+    .nav-button
+        visibility: hidden
 
     .mobile-navbar-btn
         display: block
@@ -45,14 +49,5 @@
             .mobile-nav-icon[name="close-outline"]
                 display: block
         .navbar-link
-            color: black
+            color: var.$hero-bg-color
             font-size: 2rem
-
-@media( max-width: 800px)
-    button
-        padding: 0.5rem
-        font-size: calc( 0.35rem + 0.6rem )
-
-@media( max-width: 900px)
-    .section-hero-bg
-        grid-column: 1 / -1
