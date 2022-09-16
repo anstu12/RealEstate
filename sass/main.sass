@@ -1,70 +1,72 @@
 @use '_var.sass' as var
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500&display=swap')
 
 *
     margin: 0
     padding: 0
     box-sizing: border-box
-    font-family: "Inter", sans-serif
 
-p
-    color: var.$para
-    font-weight: 400
+html
+    font-family: "Inter", sans-serif
+    font-size: clamp(1rem, 0.65rem + 0.6vw, 2rem)
+    color: var.$html-font-color
+    line-height: 1.2
 
 a
     text-decoration: none
+    color: inherit
 
-li
-    list-style: none
+img
+    max-inline-size: 100%
+    block-size: auto
+    object-fit: contain
 
 button
-    background-color: var.$btn-clr
+    background-color: var.$btn-color
     border-radius: 11px
     border-style: none
-    color: #FFF
     cursor: pointer
     display: inline-block
-    font-size: 1.2rem
-    font-weight: 500
-    line-height: 2rem
-    padding: 0.8rem 1.5rem
-    text-transform: capitalize
+    font-size: 1rem
+    color: var.$btn-font-color
+    font-weight: var.$medium-font-wt
+    line-height: 1.6
+    padding: 0.6rem 1.4rem
+
+h1,
+h2,
+.hotel-tile
+    font-family: 'Poppins'
+    color: var.$h1-color
+    font-size: 3.5rem
+    font-weight: var.$semibold
 
 h2
-    font-size: 2.25rem
-    font-weight: 600
-    line-height: 2.875rem
+    font-size: 2rem
+    line-height: 1.2
 
-.section
-    padding: 5rem 0 0 0
+p
+    font-weight: var.$regular-font-wt
+
+select
+    font-size: 1rem
+    color: var.$html-font-color
+    appearance: none
+    border-style: none
 
 .grid
     display: grid
-    gap: 5rem
 
-.grid-five-column
-    grid-template-columns: repeat(5,1fr)
-
-.grid-two-column
-    grid-template-columns: repeat(2, minmax(250px, 1fr))
-
-.grid-three-column
-    grid-template-columns: repeat(3,minmax(360px, 1fr))
-
-.section-aboutus,
-.find-home,
-.comfort
+.section-body
+    margin: 0 9%
     padding-top: 10.625rem
-    margin: 0 10rem
 
-// ---------- header ----------  
-@import "_header.sass"
+footer
+    margin: 0 9%
 
 // hero section
+
 @import "_hero-section.sass"
 
-// main body about us and find your home
-@import "_body-aboutus.sass"
+// body section
 
-//comfort
-@import "_body-bottom.sass"
+@import "_body.sass"

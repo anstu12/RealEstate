@@ -1,0 +1,196 @@
+@use '_var.sass' as var
+
+// body top about us 
+
+.grid-two-column
+    column-gap: 8.75rem
+    row-gap: 4.375rem
+    grid-template-columns: repeat(2, minmax(250px, 1fr))
+
+.about-us-img
+    width: 100%
+
+.about-us-text-container
+    display: flex
+    flex-direction: column
+    row-gap: 3rem
+    align-items: flex-start
+    justify-content: flex-start
+
+.about-us-ico
+    width: 4.514vw
+    padding-bottom: 1rem
+
+.about-us-desc
+    font-size: 1.5rem
+    font-weight: var.$semibold
+    color: var.$h1-color
+    padding-bottom: 1rem
+
+.about-us-text
+    padding-bottom: 0.5rem
+
+// body middle find home
+
+.grid-three-column
+    grid-template-columns: repeat(3,minmax(100px, 1fr))
+    column-gap: 2rem
+    row-gap: 3rem
+
+.home-types
+    list-style: none
+    gap: 3rem
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-around
+    align-items: center
+
+.find-house-img
+    width: 100%
+    object-fit: cover
+
+.home-img-2,
+.home-img-1
+    grid-row: auto / span 2
+
+.explore-btn
+    align-self: center
+    justify-self: center
+
+.house-bar
+    display: flex
+    align-items: flex-end
+
+// body comfort
+
+.comfort-container
+    grid-template-columns: repeat(2, minmax(250px, 1fr))
+    gap: 5rem
+
+.comfort-img
+    display: grid
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.8fr
+    gap: 1rem
+
+.play-btn
+    min-width: 4rem
+    height: 4rem
+    border-radius: 50%
+
+.play-button
+    align-self: center
+    grid-column: 2 / span 2
+    display: flex
+    justify-content: center
+    z-index: 2
+
+.comfort-house-1
+    grid-column: 1 / 3
+
+.comfort-house-2
+    grid-column: 3 / -1
+
+.play-button,
+.comfort-house-1,
+.comfort-house-2
+    grid-row: 1 / 2
+
+.comfort-head
+    max-inline-size: 16ch
+    padding-left: 0.5rem
+
+.comfort-list
+    display: grid
+    grid-template-columns: repeat(2, 1fr )
+    gap: 1.5rem
+    padding-left: 2rem
+    list-style: none
+    &li::before
+        content: "•"
+        color: var.$bullet-color
+        display: inline-block
+        width: 1em
+        margin-left: -1em
+
+.comfort-list-content
+    font-weight: var.$semibold
+    color: var.$h1-color
+
+.comfort-btn
+    align-self: flex-end
+    max-width: fit-content
+
+.comfort-para
+    padding-left: 0.5rem
+
+// body bottom live who you are
+
+.container-top
+    display: flex
+    justify-content: space-between
+    padding-bottom: 4rem
+
+.live-btn
+    font-size: 0.9rem
+    max-height: fit-content
+
+.live-head
+    font-weight: var.$semibold
+    color: var.$h1-color
+
+.container-bottom
+    display: flex
+    flex-direction: row
+    gap: 2rem
+    justify-content: center
+    align-items: center
+
+.cards
+    display: flex
+    flex-direction: column
+    box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08)
+    border-radius: 9px
+    padding: 1rem
+
+.hotel-resort
+    border-radius: 9px
+    padding-bottom: 1.25rem
+
+.hotel-title
+    color: var.$h1-color
+    font-weight: var.$semibold
+    font-size: 1.4rem
+    padding-bottom: 0.3rem
+
+.hotel-add
+    font-family: 'Poppins'
+    font-size: 1.2rem
+
+.hotel-price
+    font-size: 1.75rem
+    font-weight: var.$semibold
+    color: var.$price-color
+    text-align: right
+
+// testimonial
+.testimonial-container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.testimonial-hea
+    max-inline-size: 18ch
+    text-align: center
+    padding-bottom: 4rem
+
+.tes-card-container
+    display: flex
+    gap: 2.5rem
+
+.tes-card
+    max-width: 48%
+
+
+// footer
+
