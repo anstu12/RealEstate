@@ -522,4 +522,78 @@ footer {
 
 .tes-card {
   max-width: 48%;
+  -webkit-box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.0901960784);
+          box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.0901960784);
+  border-radius: 1rem;
+}
+
+.tes-content {
+  padding: 2rem;
+}
+
+.tes-p {
+  font-size: 0.8rem;
+}
+
+.tes-p2 {
+  font-size: 0.75rem;
+}
+
+.customer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+}
+
+.customer-name {
+  color: #000B2C;
+  padding-bottom: 0.5rem;
+}
+
+.tes-name {
+  padding-left: 1rem;
+}
+
+.get-house-container {
+  background-color: #3936C4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.consult-h {
+  color: #FFF;
+}
+
+.consult-p {
+  color: #FAF7F7;
+}
+
+.consult-btn {
+  color: #3936C4;
+}
+
+.consult-bg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.dream-house-img {
+  width: 50%;
 }/*# sourceMappingURL=main.css.map */
