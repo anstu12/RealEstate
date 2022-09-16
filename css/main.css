@@ -76,6 +76,7 @@ select {
 
 footer {
   margin: 0 9%;
+  padding-top: 6rem;
 }
 
 .header {
@@ -574,14 +575,21 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10rem;
 }
 
 .consult-h {
   color: #FFF;
+  line-height: 2.8;
 }
 
 .consult-p {
   color: #FAF7F7;
+  line-height: 1.9;
+  padding-bottom: 2.5rem;
 }
 
 .consult-btn {
@@ -596,4 +604,72 @@ footer {
 
 .dream-house-img {
   width: 50%;
+}
+
+.dream-house-text {
+  font-family: "Inter";
+  padding: 3rem;
+  max-inline-size: 46ch;
+  -ms-flex-preferred-size: 300rem;
+      flex-basis: 300rem;
+}
+
+.consult-btn {
+  background-color: #FFF;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.footer-logo {
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.footer-p {
+  max-inline-size: 20ch;
+}
+
+.footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-icons {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-wrap: none;
+      flex-wrap: none;
+  gap: 2.1rem;
+}
+
+.footer-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=main.css.map */
