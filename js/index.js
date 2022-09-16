@@ -24,3 +24,21 @@ window.onscroll = function()
         document.getElementById('backToTop').style.visibility="hidden";
     }
 };
+
+// responsive navbar component
+const mobile_nav = document.querySelector(".mobile-nav-icon");
+const headerElem = document.querySelector(".navbar");
+
+mobile_nav.addEventListener('click', () => {
+    headerElem.classList.toggle("active");
+})
+
+// sticky navbar
+const observer = new IntersectionObserver((entries) =>{
+    const ent = entries[0];
+    !ent.isIntersecting 
+    ? document.body.classList.add("sticky")
+    : document.body.classList.remove("sticky");
+}, {root:null,threshold:0});
+
+observer.observe(heroSection);
