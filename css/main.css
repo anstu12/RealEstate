@@ -313,11 +313,7 @@ footer {
      -moz-column-gap: 8.75rem;
           column-gap: 8.75rem;
   row-gap: 4.375rem;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
-}
-
-.about-us-img {
-  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .about-us-text-container {
@@ -354,7 +350,7 @@ footer {
 }
 
 .grid-three-column {
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   -webkit-column-gap: 2rem;
      -moz-column-gap: 2rem;
           column-gap: 2rem;
@@ -407,7 +403,7 @@ footer {
 }
 
 .comfort-container {
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
 }
 
@@ -730,6 +726,9 @@ footer {
   -ms-flex-wrap: none;
       flex-wrap: none;
   gap: 2.1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-bar {
@@ -739,6 +738,10 @@ footer {
   list-style: none;
   gap: 2.5rem;
   padding-bottom: 2rem;
+}
+
+.footer-ico {
+  width: 2.5vw;
 }
 
 .scrollTop-style {
@@ -783,11 +786,18 @@ footer {
   html {
     font-size: 1.6vw;
   }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1rem;
+  }
   .header {
     position: relative;
+    padding: 1rem 5%;
   }
   .header .logo {
-    font-size: 3em;
+    font-size: 2.6rem;
   }
   .nav-button {
     visibility: hidden;
@@ -848,5 +858,18 @@ footer {
   .navbar .navbar-link {
     color: #F3F5F7;
     font-size: 2rem;
+  }
+  .section-hero {
+    padding: 0 0 0 5%;
+  }
+  .section-body {
+    margin: 0 5%;
+    padding-top: 5.625rem;
+  }
+  .grid-two-column {
+    -webkit-column-gap: 4.75rem;
+       -moz-column-gap: 4.75rem;
+            column-gap: 4.75rem;
+    row-gap: 2.375rem;
   }
 }/*# sourceMappingURL=main.css.map */
