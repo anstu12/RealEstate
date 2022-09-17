@@ -1,21 +1,33 @@
+// background color
 $hero-bg-color: #F3F5F7;
 $body-bg-color: #FFF;
+$btn-color: #3B5CEE;
+$consult-color: #3936C4;
+
+// font color
 $h1-color: #000B2C;
 $logo-color: #001336;
 $html-font-color: #989EA7;
 $nav-link-color: #746767;
+$btn-font-color: #FFF;
+$price-color: #3954AF;
+$consult-p-color: #FAF7F7;
+
+//hover color
 $link-hov-act: #2B3F65;
+
+// font weight
 $regular-font-wt: 400;
 $medium-font-wt: 500;
 $semibold: 600;
 $logo-font-wt: 700;
-$btn-color: #3B5CEE;
-$btn-font-color: #FFF;
+
+//miscellaneous
+$bottom-boder-clr: #DBD7D7;
+$bottom-boder-active: #6796F1;
 $bullet-color: #79BBF2;
-$price-color: #3954AF;
 $box-shadow: #00000017;
-$consult-color: #3936C4;
-$consult-p-color: #FAF7F7;
 $btn-hover: #6079e9;
 $gradient-1: linear-gradient(0deg, rgba(0, 11, 44, 1) 0%, rgba(152, 158, 167, 1) 100%);
+$gradient-2: linear-gradient(0deg, rgba(0, 11, 44, 1) 50%, rgba(152, 158, 167, 1) 100%);
 $nav-shadow: 0px 10px 9px 2px rgba(0, 0, 0, 0.1);

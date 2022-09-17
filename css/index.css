@@ -9,6 +9,7 @@
 html {
   font-family: "Inter", sans-serif;
   color: #989EA7;
+  line-height: 1.5;
 }
 
 a {
@@ -17,10 +18,10 @@ a {
 }
 
 img {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-inline-size: 100%;
-  block-size: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
 }
 
 button {
@@ -42,13 +43,54 @@ button {
   text-decoration: none;
 }
 
+.btn {
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.btn:hover {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  background-color: #6079e9;
+}
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 0.5em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: 0 0 1rem 3rem white;
+          box-shadow: 0 0 1rem 3rem white;
+}
+.btn:active::after {
+  -webkit-box-shadow: 0 0 0 0 white;
+          box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 0.5em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+.btn:active {
+  top: 1px;
+}
+
 h1,
 h2,
 .hotel-tile {
   font-family: "Poppins";
   color: #000B2C;
-  font-size: 3.5rem;
+  font-size: 2.25rem;
   font-weight: 600;
+  line-height: 1.15625;
 }
 
 h2 {
@@ -99,18 +141,17 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 9%;
+  padding: 0 8.438rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #F3F5F7;
-  gap: 1rem;
-  height: 8rem;
+  height: 7rem;
 }
 
 .logo {
   font-size: 2rem;
-  line-height: 1.3;
+  line-height: 1.3125;
   color: #001336;
   font-weight: 700;
   -ms-flex-negative: 2;
@@ -121,7 +162,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.5rem;
+  gap: 2.625rem;
   -ms-flex-negative: 1;
       flex-shrink: 1;
 }
@@ -129,6 +170,8 @@ footer {
 .navbar-link {
   font-weight: 400;
   color: #746767;
+  font-size: 1.125rem;
+  line-height: 1.67;
 }
 .navbar-link:hover, .navbar-link.active {
   color: #2B3F65;
@@ -142,19 +185,26 @@ footer {
       flex-shrink: 2;
 }
 
+.nav-btn {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
 .section-hero {
   background-color: #F3F5F7;
-  padding: 6rem 0 0 9%;
+  padding: 3.125rem 0 0 8.438rem;
 }
 
 .container-hero {
-  grid-template-columns: 1fr 0.5fr 2.7fr 3fr 0.75fr;
+  grid-template-columns: 1fr 0.5fr 4fr 3fr 1.3fr;
+  margin: 0 0 0 auto;
 }
 
 .hero-text {
   grid-column: 1/4;
   align-self: flex-start;
-  padding: 2rem 0;
+  padding: 2.188rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,7 +228,7 @@ footer {
   -webkit-box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
   border-radius: 11px;
-  height: 9.625rem;
+  height: 10.694vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,11 +255,12 @@ footer {
 }
 
 .hero-heading {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.875rem;
 }
 
 .hero-desc {
-  padding-bottom: 2rem;
+  font-size: 1.25rem;
+  padding-bottom: 4.063rem;
 }
 
 .hero-num {
@@ -229,17 +280,23 @@ footer {
 }
 
 .ban-num {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 600;
   color: #001336;
-  padding-bottom: 1rem;
+  padding-bottom: 0.813rem;
+  line-height: 1rem;
+}
+
+.ban-text {
+  line-height: 1.75;
 }
 
 .bar-item-name {
   font-weight: 500;
   color: #000B2C;
-  font-size: 1.1rem;
-  padding-bottom: 0.8rem;
+  font-size: 1.125rem;
+  padding-bottom: 0.438rem;
+  line-height: 1.67;
 }
 
 .select-menu {
@@ -255,6 +312,12 @@ footer {
   right: -1.8rem;
 }
 
+.search-btn {
+  font-size: 1.125rem;
+  padding: 0.625rem 1.563rem;
+  line-height: 1.67;
+}
+
 .sticky .header {
   position: fixed;
   top: 0;
@@ -266,7 +329,16 @@ footer {
 }
 
 .sticky .section-hero {
-  margin-top: 8rem;
+  margin-top: 7rem;
+}
+
+.about-p {
+  font-size: 1.125rem;
+  line-height: 1.67;
+}
+
+.about-us-content {
+  padding-right: 0.5rem;
 }
 
 .grid-two-column {
@@ -285,7 +357,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 3rem;
+  row-gap: 1.875rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -295,18 +367,21 @@ footer {
 }
 
 .about-us-ico {
-  width: 4.514vw;
-  padding-bottom: 1rem;
+  width: 4.063rem;
+  height: 4.063rem;
 }
 
 .about-us-desc {
   font-size: 1.5rem;
   font-weight: 600;
   color: #000B2C;
-  padding-bottom: 1rem;
+  padding: 2rem 0 0.938rem;
+  line-height: 1.4167;
 }
 
 .about-us-text {
+  font-size: 1.063rem;
+  line-height: 1.5882;
   padding-bottom: 0.5rem;
 }
 
@@ -320,7 +395,7 @@ footer {
 
 .home-types {
   list-style: none;
-  gap: 3vw;
+  gap: 3.375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,6 +410,15 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 2px solid #DBD7D7;
+}
+
+.bar-item-name {
+  font-family: "Poppins";
+  font-size: 1.25rem;
+}
+.bar-item-name.active {
+  border-bottom: 3px solid #6796F1;
 }
 
 .find-house-img {
@@ -352,6 +436,11 @@ footer {
   -ms-flex-item-align: center;
       align-self: center;
   justify-self: center;
+  font-family: "poppins";
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 0.938rem 1.875rem;
 }
 
 .house-bar {
@@ -376,7 +465,7 @@ footer {
 
 .play-btn {
   min-width: 4rem;
-  height: 4rem;
+  min-height: 4rem;
   border-radius: 50%;
 }
 
@@ -407,15 +496,27 @@ footer {
 }
 
 .comfort-head {
-  max-inline-size: 16ch;
-  padding-left: 0.5rem;
+  max-inline-size: 20ch;
+  padding-bottom: 1.25rem;
+}
+
+.comfort-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .comfort-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  padding-left: 2rem;
   list-style: none;
 }
 .comfort-listli::before {
@@ -429,18 +530,20 @@ footer {
 .comfort-list-content {
   font-weight: 600;
   color: #000B2C;
+  padding-bottom: 2.75rem;
 }
 
 .comfort-btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+  font-size: 1.125rem;
 }
 
 .comfort-para {
-  padding-left: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.67;
+  padding-bottom: 2.75rem;
 }
 
 .container-top {
@@ -490,10 +593,30 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 1.25rem 4.375rem rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 1.25rem 4.375rem rgba(0, 0, 0, 0.08);
   border-radius: 9px;
   padding: 1rem;
+  background: rgb(243, 245, 247);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, rgb(243, 245, 247)), to(rgb(59, 92, 238)));
+  background: linear-gradient(0deg, rgb(243, 245, 247) 50%, rgb(59, 92, 238) 100%);
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+.cards.cards:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.cards.cards:hover .card-content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.cards.cards:hover .card-title::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .hotel-resort {
@@ -506,6 +629,36 @@ footer {
   font-weight: 600;
   font-size: 1.4rem;
   padding-bottom: 0.3rem;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.hotel-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: calc(100% + 1rem);
+  left: -1rem;
+  bottom: 0;
+  background: #2B3F65;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.card-content {
+  -webkit-transform: translateY(60%);
+          transform: translateY(60%);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .hotel-add {
@@ -557,12 +710,9 @@ footer {
   padding: 2rem;
 }
 
-.tes-p {
-  font-size: 0.8rem;
-}
-
+.tes-p,
 .tes-p2 {
-  font-size: 0.75rem;
+  font-size: 1.063rem;
 }
 
 .customer-container {
@@ -591,6 +741,11 @@ footer {
   padding-left: 1rem;
 }
 
+.tes-img {
+  max-width: 5.069vw;
+  max-height: 5.069vw;
+}
+
 .get-house-container {
   background-color: #3936C4;
   display: -webkit-box;
@@ -603,12 +758,13 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 10rem;
 }
 
 .consult-h {
   color: #FFF;
-  line-height: 2.8;
+  font-size: 2.25rem;
+  padding-bottom: 1.25rem;
+  line-height: 1.2;
 }
 
 .consult-p {
@@ -619,27 +775,16 @@ footer {
 
 .consult-btn {
   color: #3936C4;
-}
-
-.consult-bg {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
+  background-color: #FFF;
 }
 
 .dream-house-text {
   font-family: "Inter";
-  padding: 3rem;
-  max-inline-size: 46ch;
-  -ms-flex-preferred-size: 300rem;
-      flex-basis: 300rem;
+  padding: 3.75rem 3.875rem;
 }
 
-.consult-btn {
-  background-color: #FFF;
+.dream-house-img {
+  width: 60%;
 }
 
 .footer-container {
@@ -743,7 +888,7 @@ footer {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
   html {
     font-size: 1.6vw;
   }
@@ -832,5 +977,64 @@ footer {
        -moz-column-gap: 4.75rem;
             column-gap: 4.75rem;
     row-gap: 2.375rem;
+  }
+  .comfort-list {
+    gap: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .ban-text {
+    color: #001336;
+  }
+  .home-types {
+    gap: 2vw;
+  }
+}
+@media (max-width: 375px) {
+  .container-bottom {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 51%;
+    gap: 4rem;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    overflow-y: hidden;
+  }
+  .card-content {
+    padding: 4rem;
+    display: grid;
+    grid-template-rows: -webkit-min-content;
+    grid-template-rows: min-content;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  .card-content > img {
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .snaps-inline {
+    -ms-scroll-snap-type: inline mandatory;
+        scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 5rem;
+  }
+  .snaps-inline > * {
+    scroll-snap-align: middle;
+  }
+  .comfort-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .comfort-img {
+    grid-row: 2;
+  }
+  .tes-card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }/*# sourceMappingURL=index.css.map */

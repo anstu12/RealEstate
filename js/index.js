@@ -34,7 +34,7 @@ mobile_nav.addEventListener("click", () => {
 });
 
 // sticky navbar
-
+// ?bug: not working on mobile version / observer gets herosection very late
 const observer = new IntersectionObserver(
 	(entries) => {
 		const ent = entries[0];
@@ -46,16 +46,3 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(heroSection);
-
-// //animate number counter
-// const workObserver = new IntersectionObserver((entries, observer)=>{
-//     const [entry] = entries;
-//     if(entry.isIntersecting == false)
-
-//     workObserver.unobserve(heroSection);
-// },{
-//     root:null,
-//     threshold:0
-// })
-
-// workObserver.observe(heroSection);

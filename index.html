@@ -43,8 +43,8 @@
         <section class="section section-hero">
             <div class="container-hero grid">
                 <div class="hero-text">
-                    <h1 class="hero-heading">Find Your Next Perfect place To Live</h1>
-                    <p class="hero-desc">We offers wide range of the highest quality and provide a new place to live has
+                    <h1 class="hero-heading">Find Your Next<br>Perfect place To Live</h1>
+                    <p class="hero-desc">We offers wide range of the highest quality and provide a new place<br>live has
                         became much comfortable.</p>
                     <div class="hero-num">
                         <div class="banner-num">
@@ -79,6 +79,7 @@
                                 <option value="">dolor</option>
                                 <option value="">sit</option>
                             </select>
+                            <!-- to do : add select options and down arrow js -->
                             <span class="arrow"></span>
                         </div>
                     </div>
@@ -125,27 +126,22 @@
                 <div class="about-us-img">
                     <figure>
                         <img src="img/Group18246.png" alt="apartment" class="about-us-img">
+                        <!-- missing image then align bottom right -->
                     </figure>
                 </div>
                 <div class="about-us-text-container">
                     <div class="about-us-text">
-                        <figure>
-                            <img src="" alt="" class="about-us-img">
-                        </figure>
+                        <img src="img/Telico.png" alt="plaaeholder img" class="about-us-ico">
                         <p class="about-us-desc">Easy Payment Method</p>
                         <p class="about-us-content">We give you the lowest commission with easy payment method</p>
                     </div>
                     <div class="about-us-text">
-                        <figure>
-                            <img src="img/Telico.png" alt="Telegram icon" class="about-us-ico">
-                        </figure>
+                        <img src="img/Telico.png" alt="Telegram icon" class="about-us-ico">
                         <p class="about-us-desc">Tax Advantage</p>
                         <p class="about-us-text">You get may type facilities specially tax advantage is one them.</p>
                     </div>
                     <div class="about-us-text">
-                        <figure>
-                            <img src="img/emailico.png" alt="email icon" class="about-us-ico">
-                        </figure>
+                        <img src="img/emailico.png" alt="email icon" class="about-us-ico">
                         <p class="about-us-desc">Tax Advantage</p>
                         <p class="about-us-text">We offer our customer for property insurance for their better life.</p>
                     </div>
@@ -163,7 +159,7 @@
                 </div>
                 <div class="house-bar">
                     <ul class="home-types">
-                        <li class="bar-item-name">House</li>
+                        <li class="bar-item-name active">House</li>
                         <li class="bar-item-name">apartment</li>
                         <li class="bar-item-name">Villa</li>
                     </ul>
@@ -174,6 +170,7 @@
                 <div class="home-img-2">
                     <img src="img/house3.png" alt="house" class="find-house-img">
                 </div>
+                <!-- button not aligned i dont know what to do -->
                 <button class="btn explore-btn">Explore all</button>
             </div>
         </section>
@@ -184,16 +181,18 @@
             <div class="comfort-container grid">
                 <div class="comfort-img">
                     <img src="img/house4.png" alt="house-4" class="comfort-house-1">
+                    <!-- animate play button -->
                     <div class="play-button">
                         <img src="img/playbutton.png" alt="play button" class="play-btn">
                     </div>
                     <img src="img/house5.png" alt="house-5" class="comfort-house-2">
                 </div>
-                <div class="comfort-text grid">
+                <div class="comfort-text">
                     <h2 class="comfort-head">Comfort Is Our Top Priority For You.</h2>
                     <p class="comfort-para">Vivamus sed pulvinar diam. Nullam laoreet mollis. Aliquam pharetra arcu vel
                         magna semper</p>
                     <ul class="comfort-list">
+                        <!-- add span dot -->
                         <li class="comfort-list-content">Premium National Marketting</>
                         <li class="comfort-list-content">Manage Viewings</>
                         <li class="comfort-list-content">Free, no obligation valuations</>
@@ -201,7 +200,6 @@
                     </ul>
                     <button class="btn comfort-btn">See more</button>
                 </div>
-
             </div>
         </section>
 
@@ -218,24 +216,30 @@
                         <button class="btn live-btn">See more</button>
                     </div>
                 </div>
-                <div class="container-bottom">
+                <div class="container-bottom snaps-inline">
                     <div class="cards">
                         <img src="img/grandstate.png" alt="The Grand State" class="hotel-resort">
-                        <p class="hotel-title">The Grand State</p>
-                        <p class="hotel-add">Moscow, 1218</p>
-                        <p class="hotel-price">$741</p>
+                        <div class="card-content">
+                            <p class="hotel-title">The Grand State</p>
+                            <p class="hotel-add">Moscow, 1218</p>
+                            <p class="hotel-price">$741</p>
+                        </div>
                     </div>
                     <div class="cards">
                         <img src="img/hotelresort.png" alt="The hotel resort" class="hotel-resort">
-                        <p class="hotel-title">The hotel resort</p>
-                        <p class="hotel-add">Moscow, 1218</p>
-                        <p class="hotel-price">$521</p>
+                        <div class="card-content">
+                            <p class="hotel-title">The hotel resort</p>
+                            <p class="hotel-add">Moscow, 1218</p>
+                            <p class="hotel-price">$521</p>
+                        </div>
                     </div>
                     <div class="cards">
                         <img src="img/hotelresort2.png" alt="The hotel resort" class="hotel-resort">
-                        <p class="hotel-title">the hotel resort</p>
-                        <p class="hotel-add">Moscow, 1218</p>
-                        <p class="hotel-price">$ 741</p>
+                        <div class="card-content">
+                            <p class="hotel-title">the hotel resort</p>
+                            <p class="hotel-add">Moscow, 1218</p>
+                            <p class="hotel-price">$ 741</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -243,7 +247,7 @@
 
         <!-- testimonial -->
         <section class="section-body testimonial">
-            <div class="testimonial-container grid">
+            <div class="testimonial-container">
                 <h2 class="testimonial-hea">What Our Customer Say About Us</h2>
                 <div class="tes-card-container">
                     <div class="tes-card">

@@ -2,6 +2,15 @@
 
 // body top about us 
 
+.about-p {
+    font-size: 1.125rem;
+    line-height: 1.67;
+}
+
+.about-us-content {
+    padding-right: 0.5rem;
+}
+
 .grid-two-column {
     column-gap: 8.75rem;
     row-gap: 4.375rem;
@@ -11,24 +20,27 @@
 .about-us-text-container {
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 1.875rem;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
 .about-us-ico {
-    width: 4.514vw;
-    padding-bottom: 1rem;
+    width: 4.063rem;
+    height: 4.063rem;
 }
 
 .about-us-desc {
     font-size: 1.5rem;
     font-weight: var.$semibold;
     color: var.$h1-color;
-    padding-bottom: 1rem;
+    padding: 2rem 0 0.938rem;
+    line-height: 1.4167;
 }
 
 .about-us-text {
+    font-size: 1.063rem;
+    line-height: 1.5882;
     padding-bottom: 0.5rem;
 }
 
@@ -42,12 +54,22 @@
 
 .home-types {
     list-style: none;
-    gap: 3vw;
+    gap: 3.375rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 2px solid var.$bottom-boder-clr;
+}
+
+.bar-item-name {
+    font-family: 'Poppins';
+    font-size: 1.25rem;
+
+    &.active {
+        border-bottom: 3px solid var.$bottom-boder-active
+    }
 }
 
 .find-house-img {
@@ -63,6 +85,11 @@
 .explore-btn {
     align-self: center;
     justify-self: center;
+    font-family: 'poppins';
+    font-weight: var.$medium-font-wt;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0.938rem 1.875rem;
 }
 
 .house-bar {
@@ -85,7 +112,7 @@
 
 .play-btn {
     min-width: 4rem;
-    height: 4rem;
+    min-height: 4rem;
     border-radius: 50%;
 }
 
@@ -112,15 +139,20 @@
 }
 
 .comfort-head {
-    max-inline-size: 16ch;
-    padding-left: 0.5rem;
+    max-inline-size: 20ch;
+    padding-bottom: 1.25rem;
+}
+
+.comfort-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .comfort-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    padding-left: 2rem;
     list-style: none;
 
     &li::before {
@@ -135,15 +167,18 @@
 .comfort-list-content {
     font-weight: var.$semibold;
     color: var.$h1-color;
+    padding-bottom: 2.75rem;
 }
 
 .comfort-btn {
-    align-self: flex-end;
     max-width: fit-content;
+    font-size: 1.125rem;
 }
 
 .comfort-para {
-    padding-left: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    padding-bottom: 2.75rem;
 }
 
 // body bottom live who you are
@@ -175,9 +210,26 @@
 .cards {
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 1.25rem 4.375rem rgba(0, 0, 0, 0.08);
     border-radius: 9px;
     padding: 1rem;
+    background: rgb(243, 245, 247);
+    background: linear-gradient(0deg, rgba(243, 245, 247, 1) 50%, rgba(59, 92, 238, 1) 100%);
+    overflow: hidden;
+
+    transition: transform 500ms ease;
+
+    &.cards:hover {
+        transform: scale(1.05);
+
+        .card-content {
+            transform: translateY(0);
+        }
+
+        .card-title::after {
+            transform: scaleX(1);
+        }
+    }
 }
 
 .hotel-resort {
@@ -190,6 +242,26 @@
     font-weight: var.$semibold;
     font-size: 1.4rem;
     padding-bottom: 0.3rem;
+    position: relative;
+    width: max-content;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: calc(100% + 1rem);
+        left: calc(1rem * -1);
+        bottom: 0;
+        background: var.$link-hov-act;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 500ms ease;
+    }
+}
+
+.card-content {
+    transform: translateY(60%);
+    transition: transform 500ms ease;
 }
 
 .hotel-add {
@@ -232,12 +304,9 @@
     padding: 2rem;
 }
 
-.tes-p {
-    font-size: 0.8rem;
-}
-
+.tes-p,
 .tes-p2 {
-    font-size: 0.75rem;
+    font-size: 1.063rem;
 }
 
 .customer-container {
@@ -257,18 +326,24 @@
     padding-left: 1rem;
 }
 
+.tes-img {
+    max-width: 5.069vw;
+    max-height: 5.069vw;
+}
+
 // consulation
 .get-house-container {
     background-color: var.$consult-color;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10rem;
 }
 
 .consult-h {
     color: var.$body-bg-color;
-    line-height: 2.8;
+    font-size: 2.25rem;
+    padding-bottom: 1.25rem;
+    line-height: 1.2;
 }
 
 .consult-p {
@@ -279,21 +354,18 @@
 
 .consult-btn {
     color: var.$consult-color;
+    background-color: var.$body-bg-color;
 }
 
-.consult-bg {
-    align-items: flex-end;
-    object-fit: cover;
-    height: 100%;
-}
+// i dont know if this is correct way or not
 
 .dream-house-text {
     font-family: 'Inter';
-    padding: 3rem;
-    max-inline-size: 46ch;
-    flex-basis: 300rem;
+    padding: 3.75rem 3.875rem;
 }
 
-.consult-btn {
-    background-color: var.$body-bg-color;
+.dream-house-img {
+    width: 60%;
 }
+
+// text should not go beyond title

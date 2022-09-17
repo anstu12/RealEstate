@@ -1,6 +1,10 @@
 @use "_var.scss" as var; // media queries
 
-@media(max-width: 768px) {
+//mobile size
+@media(max-width:425px) {}
+
+//tablet size
+@media(max-width: 912px) {
     html {
         font-size: 1.6vw;
     }
@@ -89,5 +93,66 @@
     .grid-two-column {
         column-gap: 4.75rem;
         row-gap: 2.375rem;
+    }
+
+    .comfort-list {
+        gap: 0;
+    }
+}
+
+@media(max-width: 1024px) {
+    .ban-text {
+        color: var.$logo-color;
+    }
+
+    .home-types {
+        gap: 2vw;
+    }
+}
+
+@media(max-width:375px) {
+    .container-bottom {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 51%;
+        gap: 4rem;
+        overflow-x: scroll;
+        overscroll-behavior-inline: contain;
+        overflow-y: hidden;
+    }
+
+    .card-content {
+        padding: 4rem;
+        display: grid;
+        grid-template-rows: min-content;
+        transform: translateY(50%);
+
+        >img {
+            inline-size: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+    }
+
+    .snaps-inline {
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: 5rem;
+
+        >* {
+            scroll-snap-align: middle;
+        }
+    }
+
+    .comfort-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .comfort-img {
+        grid-row: 2;
+    }
+
+    .tes-card-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
