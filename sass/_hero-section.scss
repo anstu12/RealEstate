@@ -1,0 +1,151 @@
+@use '_var.scss' as var;
+
+// navbar
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 9%;
+    justify-content: space-between;
+    background-color: var.$hero-bg-color;
+    gap: 1rem;
+    height: 8rem;
+}
+
+.logo {
+    font-size: 2rem;
+    line-height: 1.3;
+    color: var.$logo-color;
+    font-weight: var.$logo-font-wt;
+    flex-shrink: 2;
+}
+
+.navbar {
+    display: flex;
+    gap: 2.5rem;
+    flex-shrink: 1;
+}
+
+.navbar-link {
+    font-weight: var.$regular-font-wt;
+    color: var.$nav-link-color;
+
+    &:hover,
+    &.active {
+        color: var.$link-hov-act;
+        font-weight: var.$semibold;
+        transition: color .3s linear;
+    }
+}
+
+.nav-button {
+    flex-shrink: 2;
+}
+
+// hero section
+
+.section-hero {
+    background-color: var.$hero-bg-color;
+    padding: 6rem 0 0 9%;
+}
+
+.container-hero {
+    grid-template-columns: 1fr .5fr 2.7fr 3fr .75fr;
+}
+
+.hero-text {
+    grid-column: 1 / 4;
+    align-self: flex-start;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    z-index: 2;
+}
+
+.section-hero-bg {
+    grid-column: 3 / -1;
+    z-index: 1;
+}
+
+.section-hero-bottom {
+    grid-column: 1 / -2;
+    align-self: flex-end;
+    background-color: var.$body-bg-color;
+    box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
+    border-radius: 11px;
+    height: 9.625rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.hero-text,
+.section-hero-bg,
+.section-hero-bottom {
+    grid-row: 1 / 2;
+}
+
+.hero-heading {
+    padding-bottom: 1.5rem;
+}
+
+.hero-desc {
+    padding-bottom: 2rem;
+}
+
+.hero-num {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-start;
+    gap: 2rem;
+}
+
+.ban-num {
+    font-size: 1.5rem;
+    font-weight: var.$semibold;
+    color: var.$logo-color;
+    padding-bottom: 1rem;
+}
+
+.bar-item-name {
+    font-weight: var.$medium-font-wt;
+    color: var.$h1-color;
+    font-size: 1.1rem;
+    padding-bottom: 0.8rem;
+}
+
+.select-menu {
+    position: relative;
+}
+
+.arrow {
+    display: block;
+    height: 100%;
+    width: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: -1.8rem;
+}
+
+// stiky responsive navbar
+.sticky .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 6;
+    box-shadow: var.$nav-shadow;
+}
+
+.sticky .section-hero {
+    margin-top: 8rem;
+}

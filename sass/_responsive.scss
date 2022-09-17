@@ -1,0 +1,93 @@
+@use "_var.scss" as var; // media queries
+
+@media(max-width: 768px) {
+    html {
+        font-size: 1.6vw;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .header {
+        position: relative;
+        padding: 1rem 5%;
+
+        .logo {
+            font-size: 2.6rem;
+        }
+    }
+
+    .nav-button {
+        visibility: hidden;
+    }
+
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 9;
+        color: var.$btn-color ;
+    }
+
+    .mobile-nav-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        color: var.$btn-color;
+    }
+
+    .navbar {
+        z-index: 4;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var.$gradient-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        &.active {
+            transform: translateX(0%);
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-nav-icon[name="menu-outline"] {
+            display: none;
+        }
+
+        .mobile-nav-icon[name="close-outline"] {
+            display: block;
+        }
+    }
+
+    .navbar-link {
+        color: var.$hero-bg-color;
+        font-size: 2rem;
+    }
+
+    .section-hero {
+        padding: 0 0 0 5%;
+    }
+
+    .section-body {
+        margin: 0 5%;
+        padding-top: 5.625rem;
+    }
+
+    .grid-two-column {
+        column-gap: 4.75rem;
+        row-gap: 2.375rem;
+    }
+}
