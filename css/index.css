@@ -10,6 +10,7 @@ html {
   font-family: "Inter", sans-serif;
   color: #989EA7;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -986,7 +987,7 @@ footer {
             flex-direction: column;
     z-index: 2;
     grid-row: 2/3;
-    gap: 2rem;
+    gap: 1rem;
   }
   .hero-text,
 .section-hero-bg {
@@ -1007,9 +1008,203 @@ footer {
   .bar-item:last-child {
     border: none;
   }
-  .search-btn {
-    font-size: 1.125rem;
-    padding: 0.625rem 1.563rem;
-    line-height: 1.67;
+  .grid-two-column {
+    -webkit-column-gap: 4.75rem;
+       -moz-column-gap: 4.75rem;
+            column-gap: 4.75rem;
+    row-gap: 2.375rem;
+    grid-template-columns: 1fr;
+  }
+  .about-us-ico {
+    width: 3.063rem;
+    height: 3.063rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .about-us-desc,
+.about-us-text {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .grid-three-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .comfort-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .live-head {
+    font-weight: 600;
+    color: #000B2C;
+    padding-bottom: 1rem;
+  }
+  .live-desc {
+    padding-bottom: 0.5rem;
+  }
+  .owm-para {
+    text-align: center;
+  }
+  .cards {
+    overflow-x: scroll;
+    min-width: 200px;
+  }
+  .tes-card {
+    max-width: 100%;
+  }
+  .tes-card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tes-img {
+    max-width: 5rem;
+    max-height: 5rem;
+  }
+  .dream-house-text {
+    position: absolute;
+  }
+  .get-house-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+  }
+  .dream-house-img {
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+  }
+  .dream-house-img .consult-bg {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    transition: -webkit-transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  }
+  .dream-house-img .consult-bg:hover {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  .footer-container,
+.footer-nav,
+.footer-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (min-width: 425px) and (max-width: 912px) {
+  .header {
+    position: relative;
+    padding: 1rem 4rem;
+  }
+  .header .logo {
+    font-size: 2.6rem;
+  }
+  .nav-button {
+    visibility: hidden;
+  }
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 9;
+    color: #3B5CEE;
+  }
+  .mobile-nav-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #3B5CEE;
+  }
+  .navbar {
+    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(0, 11, 44)), to(rgb(152, 158, 167)));
+    background: linear-gradient(0deg, rgb(0, 11, 44) 0%, rgb(152, 158, 167) 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .navbar.active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .navbar .mobile-nav-icon[name=menu-outline] {
+    display: none;
+  }
+  .navbar .mobile-nav-icon[name=close-outline] {
+    display: block;
+  }
+  .navbar-link {
+    color: #F3F5F7;
+    font-size: 2rem;
+  }
+  .section-hero {
+    padding: 0 0 0 5rem;
+  }
+  .section-body {
+    margin: 0 5rem;
+    padding-top: 5.625rem;
+  }
+  .grid-two-column {
+    -webkit-column-gap: 4.75rem;
+       -moz-column-gap: 4.75rem;
+            column-gap: 4.75rem;
+    row-gap: 2.375rem;
+  }
+  .comfort-list {
+    gap: 0;
+  }
+  .dream-house-img {
+    width: 100%;
+  }
+  .dream-house-text {
+    padding: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .ban-text {
+    color: #001336;
+  }
+  .home-types {
+    gap: 2vw;
   }
 }/*# sourceMappingURL=index.css.map */

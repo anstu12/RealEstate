@@ -10,6 +10,7 @@ html {
     font-family: "Inter", sans-serif;
     color: var.$html-font-color;
     line-height: 1.5;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -166,8 +167,6 @@ footer {
     display: none;
 }
 
-
 //responsive code
-
 
 @import "_responsive.scss";
