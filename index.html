@@ -5,339 +5,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
     <title>Build | Real Estate Website Design</title>
 </head>
 
 <body>
-
-    <!-- navigation bar -->
-
-    <header class="header">
-        <a href="#" class="logo">Build</a>
-        <nav class="navbar">
-            <a href="#" class="navbar-link active">Home</a>
-            <a href="#" class="navbar-link ">Products</a>
-            <a href="#" class="navbar-link ">About</a>
-            <a href="#" class="navbar-link ">Services</a>
-            <a href="#" class="navbar-link ">Blog</a>
-        </nav>
-        <div class="nav-button">
-            <button class="btn nav-btn">Get Started</button>
-        </div>
-        <div class="mobile-navbar-btn">
-            <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-            <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+    <!-- header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <p class="logo-text">Build</p>
+            </div>
+            <div class="navbar">
+                <nav class="navbar-list">
+                    <a href="#" class="nav-li active">Home</a>
+                    <a href="#" class="nav-li">Products</a>
+                    <a href="#" class="nav-li">About</a>
+                    <a href="#" class="nav-li">Service</a>
+                    <a href="#" class="nav-li">Blog</a>
+                </nav>
+            </div>
+            <div class="header-button">
+                <button class="btn header-btn">Get Started</button>
+            </div>
         </div>
     </header>
 
-    <!-- hero section -->
-
-    <main>
-        <section class="section section-hero">
-            <div class="container-hero grid">
-                <div class="hero-text">
-                    <h1 class="hero-heading">Find Your Next<br>Perfect place To Live</h1>
-                    <p class="hero-desc">We offers wide range of the highest quality and provide a new place<br>live has
-                        became much comfortable.</p>
-                    <div class="hero-num">
-                        <div class="banner-num">
-                            <p class="ban-num counter" data-target="1200"></p>
-                            <p class="ban-text">Premium Product</p>
-                        </div>
-                        <div class="banner-num">
-                            <p class="ban-num counter" data-target="4000"></p>
-                            <p class="ban-text">Happy Customers</p>
-                        </div>
-                        <div class="banner-num">
-                            <p class="ban-num counter" data-target="260"></p>
-                            <p class="ban-text">Winning Awards</p>
-                        </div>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="hero-title">
+                    <h1 class="hero-heading">Find Your Next Perfect place To Live</h1>
+                    <p class="hero-desc">We offers wide range of the highest quality and provide a new place<br>live has became much
+                        comfortable.</p>
+                </div>
+                <div class="hero-num">
+                    <div class="banner-num">
+                        <p class="ban-num">1200+</p>
+                        <p class="ban-text">Premium Product</p>
+                    </div>
+                    <div class="banner-num">
+                        <p class="ban-num">4000+</p>
+                        <p class="ban-text">Happy Customers</p>
+                    </div>
+                    <div class="banner-num">
+                        <p class="ban-num">260+</p>
+                        <p class="ban-text">Winning Awards</p>
                     </div>
                 </div>
-
-                <!-- hero background -->
-
-                <div class="section-hero-bg">
-                    <img src="img/hero-bg.png" alt="hero-background-skyscraper" class="hero-bg">
-                </div>
-
-                <!-- hero bottom bar -->
-                <div class="section-hero-bottom">
+            </div>
+            <div class="hero-bg">
+                <img src="img/low-view-modern-skyscrapers-office-buildings-transformed1.png" alt="modern-skyscraper">
+            </div>
+            <div class="hero-bar">
+                <div class="hero-bar-container">
                     <div class="bar-item">
                         <p class="bar-item-name">Locations</p>
                         <div class="select-menu">
-                            <select>
-                                <option value="">Select your city</option>
-                                <option value="">ipsum</option>
-                                <option value="">dolor</option>
-                                <option value="">sit</option>
-                            </select>
-                            <!-- to do : add select options and down arrow js -->
-                            <span class="arrow"></span>
+                            <label class="select" for="slct">
+                                <select class="slct" required="required">
+                                    <option value="" disabled="disabled" selected="selected">Select your city</option>
+                                    <option value="#">One</option>
+                                    <option value="#">Two</option>
+                                    <option value="#">Three</option>
+                                </select>
+                                <svg>
+                                    <use xlink:href="#select-arrow-down"></use>
+                                </svg>
+                            </label>
+                            <!-- SVG Sprites-->
+                            <svg class="sprites">
+                                <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                                    <polyline points="1 1 5 5 9 1"></polyline>
+                                </symbol>
+                            </svg>
                         </div>
                     </div>
                     <div class="bar-item">
                         <p class="bar-item-name">Property Type</p>
                         <div class="select-menu">
-                            <select>
-                                <option value="">Select property type</option>
-                                <option value="">ipsum</option>
-                                <option value="">dolor</option>
-                                <option value="">sit</option>
-                            </select>
-                            <span class="arrow"></span>
+                            <label class="select" for="slct">
+                                <select id="slct" required="required">
+                                    <option value="" disabled="disabled" selected="selected">Select property type</option>
+                                    <option value="#">One</option>
+                                    <option value="#">Two</option>
+                                    <option value="#">Three</option>
+                                </select>
+                                <svg>
+                                    <use xlink:href="#select-arrow-down"></use>
+                                </svg>
+                            </label>
                         </div>
                     </div>
                     <div class="bar-item">
                         <p class="bar-item-name">Rent range</p>
-                        <div class="select-menu">
-                            <select>
-                                <option value="">Select rent range</option>
-                                <option value="">ipsum</option>
-                                <option value="">dolor</option>
-                                <option value="">sit</option>
+                        <label class="select" for="slct">
+                            <select class="slct" required="required">
+                                <option value="" disabled="disabled" selected="selected">Select rent range</option>
+                                <option value="#">One</option>
+                                <option value="#">Two</option>
+                                <option value="#">Three</option>
                             </select>
-                            <span class="arrow"></span>
-                        </div>
+                            <svg>
+                                <use xlink:href="#select-arrow-down"></use>
+                            </svg>
+                        </label>
                     </div>
                     <div class="bar-item">
                         <button class="btn search-btn">Search</button>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- body -->
-
-        <!-- body top about us -->
-
-        <section class="section-body section-aboutus">
-            <div class="container-body grid grid-two-column">
-                <h2 class="about-h">Why you should buy your dream house from us?</h2>
-                <p class="about-p">One shall ticking very shall on expected a likewise, or to best window there&#8217;s
-                    the clarinet value is world his of my business, of headline he the to as the question.</p>
-                <div class="about-us-img">
-                    <figure>
-                        <img src="img/Group18246.png" alt="apartment" class="about-us-img">
-                        <!-- missing image then align bottom right -->
-                    </figure>
-                </div>
-                <div class="about-us-text-container">
-                    <div class="about-us-text">
-                        <img src="img/Telico.png" alt="plaaeholder img" class="about-us-ico">
-                        <p class="about-us-desc">Easy Payment Method</p>
-                        <p class="about-us-content">We give you the lowest commission with easy payment method</p>
-                    </div>
-                    <div class="about-us-text">
-                        <img src="img/Telico.png" alt="Telegram icon" class="about-us-ico">
-                        <p class="about-us-desc">Tax Advantage</p>
-                        <p class="about-us-text">You get may type facilities specially tax advantage is one them.</p>
-                    </div>
-                    <div class="about-us-text">
-                        <img src="img/emailico.png" alt="email icon" class="about-us-ico">
-                        <p class="about-us-desc">Tax Advantage</p>
-                        <p class="about-us-text">We offer our customer for property insurance for their better life.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- body middle 1 -->
-
-        <section class="section-body find-home">
-            <div class="container-body grid grid-three-column">
-                <h2 class="about-f">Write Your Life Find Your Home.</h2>
-                <div class="home-img-1">
-                    <img src="img/house2.png" alt="house" class="find-house-img">
-                </div>
-                <div class="house-bar">
-                    <ul class="home-types">
-                        <li class="bar-item-name active">House</li>
-                        <li class="bar-item-name">apartment</li>
-                        <li class="bar-item-name">Villa</li>
-                    </ul>
-                </div>
-                <div class="home-img-2">
-                    <img src="img/house1.png" alt="house" class="find-house-img">
-                </div>
-                <div class="home-img-2">
-                    <img src="img/house3.png" alt="house" class="find-house-img">
-                </div>
-                <!-- button not aligned i dont know what to do -->
-                <button class="btn explore-btn">Explore all</button>
-            </div>
-        </section>
-
-        <!-- body middle 2 comfort -->
-
-        <section class="section-body comfort">
-            <div class="comfort-container grid">
-                <div class="comfort-img">
-                    <img src="img/house4.png" alt="house-4" class="comfort-house-1">
-                    <!-- animate play button -->
-                    <div class="play-button">
-                        <img src="img/playbutton.png" alt="play button" class="play-btn">
-                    </div>
-                    <img src="img/house5.png" alt="house-5" class="comfort-house-2">
-                </div>
-                <div class="comfort-text">
-                    <h2 class="comfort-head">Comfort Is Our Top Priority For You.</h2>
-                    <p class="comfort-para">Vivamus sed pulvinar diam. Nullam laoreet mollis. Aliquam pharetra arcu vel
-                        magna semper</p>
-                    <ul class="comfort-list">
-                        <!-- add span dot -->
-                        <li class="comfort-list-content">Premium National Marketting</li>
-                        <li class="comfort-list-content">Manage Viewings</li>
-                        <li class="comfort-list-content">Free, no obligation valuations</li>
-                        <li class="comfort-list-content">Local area Knowledge</li>
-                    </ul>
-                    <button class="btn comfort-btn">See more</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- body bottom live who you are -->
-
-        <section class="section-body about-bottom">
-            <div class="container-live">
-                <div class="container-top">
-                    <div class="live-desc">
-                        <h2 class="live-head">Live who you are</h2>
-                        <p class="own-para">Own the home meant for you</p>
-                    </div>
-                    <div class="button-live">
-                        <button class="btn live-btn">See more</button>
-                    </div>
-                </div>
-                <div class="container-bottom snaps-inline">
-                    <div class="cards">
-                        <img src="img/grandstate.png" alt="The Grand State" class="hotel-resort">
-                        <div class="card-content">
-                            <p class="hotel-title">The Grand State</p>
-                            <p class="hotel-add">Moscow, 1218</p>
-                            <p class="hotel-price">$741</p>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        <img src="img/hotelresort.png" alt="The hotel resort" class="hotel-resort">
-                        <div class="card-content">
-                            <p class="hotel-title">The hotel resort</p>
-                            <p class="hotel-add">Moscow, 1218</p>
-                            <p class="hotel-price">$521</p>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        <img src="img/hotelresort2.png" alt="The hotel resort" class="hotel-resort">
-                        <div class="card-content">
-                            <p class="hotel-title">the hotel resort</p>
-                            <p class="hotel-add">Moscow, 1218</p>
-                            <p class="hotel-price">$ 741</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- testimonial -->
-        <section class="section-body testimonial">
-            <div class="testimonial-container">
-                <h2 class="testimonial-hea">What Our Customer Say About Us</h2>
-                <div class="tes-card-container">
-                    <div class="tes-card">
-                        <div class="tes-content">
-                            <p class="about-p tes-p">“Excellent work, through nine years of managing my house as a
-                                rental and
-                                in recently selling.
-                                Rolf and Partners Reall Estate have proven through, informed and responsive. My highest
-                                recommendation.”</p>
-                            <div class="customer-container">
-                                <img src="img/vincent.png" alt="customer photo" class="tes-img">
-                                <div class="tes-name">
-                                    <p class="customer-name about-p">Vincent and Victoria</p>
-                                    <p class="tes-p2">Home - Owner MY</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tes-card">
-                        <div class="tes-content">
-                            <p class="about-p tes-p">“The best!!”<br>“Great work, as both property managers and one
-                                the sole; I would recommend Partners Real Estate to Others....”
-                            </p>
-                            <div class="customer-container">
-                                <img src="img/john.png" alt="customer photo" class="tes-img">
-                                <div class="tes-name">
-                                    <p class="customer-name about-p">John and Dianna shire</p>
-                                    <p class="tes-p2">Home - Owner ID</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- body bottom get your dream house -->
-
-        <section class="section-body get-house">
-            <div class="get-house-container">
-                <div class="dream-house-text">
-                    <h2 class="consult-h">Get Your Dream House</h2>
-                    <p class="consult-p box">Family is number one, and comfortable is number two. That two things is
-                        must be
-                        together.
-                        Let&#8217;s start it!</p>
-                    <button class="btn consult-btn">Request Consultation</button>
-                </div>
-                <div class="dream-house-img">
-                    <img src="img/apartment-building-city-with-copy-space-transformed2.png" alt="consult bg img"
-                        class="consult-bg">
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- footer content -->
-
-    <footer class="section-footer">
-        <div class="footer-container">
-            <div class="footer-text">
-                <h2 class="logo footer-logo">Build</h2>
-                <p class="footer-p">As the most visited real estate website worldwide.</p>
-            </div>
-            <div class="footer-nav">
-                <ul class="footer-bar">
-                    <li>Services</li>
-                    <li>Features</li>
-                    <li>FAQ</li>
-                    <li>Contact</li>
-                    <li>Privacy Policy</li>
-                </ul>
-                <ul class="footer-icons">
-                    <li><img src="img/fb-ico.png" class="footer-ico"></li>
-                    <li><img src="img/ins-ico.png" class="footer-ico"></li>
-                    <li><img src="img/twi-ico.png" class="footer-ico"></li>
-                    <li><img src="img/lin-ico.png" class="footer-ico"></li>
-                </ul>
-            </div>
         </div>
-    </footer>
-
-    <!-- scroll to top section -->
-
-    <!-- javascript -->
-    <script src="js/index.js"></script>
-
-    <!-- ionicons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+    <section class="section-body"></section>
 </body>
 
 </html>
