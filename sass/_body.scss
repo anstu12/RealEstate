@@ -1,0 +1,44 @@
+@use '_var.scss' as var;
+
+.section-aboutus {
+    margin: 10.625rem 8.438rem 0;
+}
+
+.aboutus-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: 0.5fr 2.1fr 0.4fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+}
+
+.aboutus-left {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 2.1fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+.aboutus-h {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.aboutus-img {
+    grid-area: 2 / 1 / 4 / 3;
+}
+
+.aboutus-rent {
+    grid-area: 3 / 2 / 4 / 4;
+}
+
+.aboutus-p {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.aboutus-text-container {
+    grid-area: 2 / 2 / 3 / 3;
+}
