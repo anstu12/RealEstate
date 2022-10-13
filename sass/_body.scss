@@ -1,7 +1,7 @@
 @use '_var.scss' as var;
 
 .section-aboutus {
-    margin: 10.625rem 8.438rem 0;
+    margin: 10.625rem 9.375vw 0;
 }
 
 .aboutus-container {
@@ -14,13 +14,18 @@
     grid-auto-flow: row;
 }
 
+@mixin scalable-grid($columns, $rows, $width) {
+    height: $rows * $width / $columns;
+    grid-gap: 0;
+}
+
 .aboutus-left {
     display: grid;
     grid-template-columns: 1.5fr 1fr 0.5fr;
     grid-template-rows: 0.5fr 2.1fr 0.4fr;
-    gap: 0px 0px;
     grid-auto-flow: row;
     grid-area: 1 / 1 / 4 / 2;
+    @include scalable-grid(3, 3, 70vw);
 }
 
 .aboutus-h {
@@ -33,6 +38,11 @@
 
 .aboutus-rent {
     grid-area: 3 / 2 / 4 / 4;
+    background-color: var.$btn-text;
+    box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.07);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
 }
 
 .aboutus-p {
@@ -70,14 +80,6 @@
     height: 32px;
 }
 
-.rent-content {
-    background-color: var.$btn-text;
-    box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.07);
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-}
-
 .property-ico-container {
     background-color: var.$btn-bg;
     width: 65px;
@@ -100,4 +102,153 @@
     font-size: 2.25rem;
     line-height: 1.278;
     color: var.$h1;
+}
+
+.about-p {
+    font-size: 1.125rem;
+    line-height: 1.67;
+}
+
+// body middle find home
+
+.grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+}
+
+.home-types {
+    list-style: none;
+    gap: 3.375rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid var.$bottom-boder-clr;
+}
+
+.bar-item-name {
+    font-family: 'Poppins';
+    font-size: 1.25rem;
+
+    &.active {
+        border-bottom: 3px solid var.$bottom-boder-active
+    }
+}
+
+.find-house-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.home-img-2,
+.home-img-1 {
+    grid-row: auto / span 2;
+}
+
+.explore-btn {
+    align-self: center;
+    justify-self: center;
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0.938rem 1.875rem;
+}
+
+.house-bar {
+    display: flex;
+    align-items: flex-end;
+}
+
+.container-body {
+    display: grid;
+    margin: 10.625rem 9.375vw 0;
+}
+
+// body comfort
+
+.comfort-container {
+    margin: 10.625rem 9.375vw 0;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.comfort-img {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.8fr;
+    gap: 1rem;
+}
+
+.play-btn {
+    min-width: 4rem;
+    min-height: 4rem;
+    border-radius: 50%;
+}
+
+.play-button {
+    align-self: center;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.comfort-house-1 {
+    grid-column: 1 / 3;
+}
+
+.comfort-house-2 {
+    grid-column: 3 / -1;
+}
+
+.play-button,
+.comfort-house-1,
+.comfort-house-2 {
+    grid-row: 1 / 2;
+}
+
+.comfort-head {
+    max-inline-size: 20ch;
+    padding-bottom: 1.25rem;
+}
+
+.comfort-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.comfort-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    list-style: none;
+
+    &li::before {
+        content: "•";
+        color: var.$dot;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+}
+
+.comfort-list-content {
+    font-weight: 500;
+    color: var.$h1;
+    padding-bottom: 2.75rem;
+}
+
+.comfort-btn {
+    max-width: fit-content;
+    font-size: 1.125rem;
+}
+
+.comfort-para {
+    font-size: 1.125rem;
+    line-height: 1.67;
+    padding-bottom: 2.75rem;
 }

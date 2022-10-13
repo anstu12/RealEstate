@@ -41,9 +41,12 @@ h2 {
 
 img {
     width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
 @import '_header.scss';
 
 @import '_body.scss';
+
+@import '_footer.scss';
