@@ -39,6 +39,11 @@ h2 {
     border-style: none;
 }
 
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
 @import '_header.scss';
 
 @import '_body.scss';

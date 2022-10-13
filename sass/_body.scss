@@ -41,4 +41,63 @@
 
 .aboutus-text-container {
     grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.aboutus-text-h {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4167;
+    color: var.$h1;
+    padding-top: 2rem;
+    padding-bottom: 0.938rem;
+}
+
+.aboutus-ico {
+    width: 65px;
+    height: 65px;
+}
+
+.aboutus-text-p {
+    font-size: 1.125rem;
+    line-height: 1.56;
+}
+
+.property-ico {
+    width: 32px;
+    height: 32px;
+}
+
+.rent-content {
+    background-color: var.$btn-text;
+    box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.07);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+}
+
+.property-ico-container {
+    background-color: var.$btn-bg;
+    width: 65px;
+    height: 65px;
+    margin: 26px 21px 24px 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+}
+
+.total-rent {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var.$h1;
+}
+
+.rent-unit {
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 1.278;
+    color: var.$h1;
 }
