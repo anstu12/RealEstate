@@ -21,8 +21,8 @@
                 <nav class="navbar-list">
                     <a href="#" class="nav-li active">Home</a>
                     <a href="#" class="nav-li">Products</a>
-                    <a href="#" class="nav-li">About</a>
-                    <a href="#" class="nav-li">Service</a>
+                    <a href="#section-aboutus" class="nav-li">About</a>
+                    <a href="#section-service" class="nav-li">Service</a>
                     <a href="#" class="nav-li">Blog</a>
                 </nav>
             </div>
@@ -39,19 +39,19 @@
                     <h1 class="hero-heading">Find Your Next Perfect place To Live</h1>
                     <p class="hero-desc">We offers wide range of the highest quality and provide a new place<br>live has became much
                         comfortable.</p>
-                </div>
-                <div class="hero-num">
-                    <div class="banner-num">
-                        <p class="ban-num">1200+</p>
-                        <p class="ban-text">Premium Product</p>
-                    </div>
-                    <div class="banner-num">
-                        <p class="ban-num">4000+</p>
-                        <p class="ban-text">Happy Customers</p>
-                    </div>
-                    <div class="banner-num">
-                        <p class="ban-num">260+</p>
-                        <p class="ban-text">Winning Awards</p>
+                    <div class="hero-num">
+                        <div class="banner-num">
+                            <p class="ban-num counter" data-target="1200"></p>
+                            <p class="ban-text">Premium Product</p>
+                        </div>
+                        <div class="banner-num">
+                            <p class="ban-num counter" data-target="4000"></p>
+                            <p class="ban-text">Happy Customers</p>
+                        </div>
+                        <div class="banner-num">
+                            <p class="ban-num counter" data-target="260"></p>
+                            <p class="ban-text">Winning Awards</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,16 +124,16 @@
 
     <!-- body top about us -->
 
-    <section class="section-aboutus">
+    <section class="section-aboutus" id="section-aboutus">
         <div class="aboutus-container">
             <div class="aboutus-left">
-                <div class="aboutus-h">
+                <div class="aboutus-h fade-in">
                     <h2>Why you should buy your dream house from us?</h2>
                 </div>
                 <div class="aboutus-img">
                     <img src="img/Rectangle4642.png" alt="building image" class="aboutus-bgimg">
                 </div>
-                <div class="aboutus-rent">
+                <div class="aboutus-rent fade-in">
                     <div class="property-ico-container">
                         <img src="img/Orion_property1.png" alt="orion_property" class="property-ico">
                         <!-- shadow attached to image -->
@@ -144,25 +144,33 @@
                     </div>
                 </div>
             </div>
-            <div class="aboutus-p">
+            <div class="aboutus-p fade-in">
                 <p class="about-p">One shall ticking very shall on expected a likewise, or to best window there&#8217;s the clarinet value
                     is world his of my business, of headline he the to as the question.</p>
             </div>
-            <div class="aboutus-text-container">
-                <div class="aboutus-content">
-                    <img src="img/Group17955.png" alt="creditcard" class="aboutus-ico">
-                    <p class="aboutus-text-h">Easy Payment Method</p>
-                    <p class="aboutus-text-p">We give you the lowest commission with easy payment method</p>
+            <div class="aboutus-text-container carousel">
+                <div class="carousel-button carousel-button--left">
+                    <button class="carousel_btn--left"><img src="img/icons8-less-than-100.png" alt="arrow-left"></button>
                 </div>
-                <div class="aboutus-content">
-                    <img src="img/Group17955.png" alt="telegram" class="aboutus-ico">
-                    <p class="aboutus-text-h">Tax Advantage</p>
-                    <p class="aboutus-text-p">You get may type facilities specially tax advantage is one them.</p>
+                <div class="carousel_track">
+                    <div class="aboutus-content fade-in current_slide">
+                        <img src="img/Group17955.png" alt="creditcard" class="aboutus-ico">
+                        <p class="aboutus-text-h">Easy Payment Method</p>
+                        <p class="aboutus-text-p">We give you the lowest commission with easy payment method</p>
+                    </div>
+                    <div class="aboutus-content fade-in">
+                        <img src="img/Group17955.png" alt="telegram" class="aboutus-ico">
+                        <p class="aboutus-text-h">Tax Advantage</p>
+                        <p class="aboutus-text-p">You get may type facilities specially tax advantage is one them.</p>
+                    </div>
+                    <div class="aboutus-content fade-in">
+                        <img src="img/emailico.png" alt="emailicon" class="aboutus-ico">
+                        <p class="aboutus-text-h">Tax Advantage</p>
+                        <p class="aboutus-text-p">We offer our customer for property insurance for their better life.</p>
+                    </div>
                 </div>
-                <div class="aboutus-content">
-                    <img src="img/emailico.png" alt="emailicon" class="aboutus-ico">
-                    <p class="aboutus-text-h">Tax Advantage</p>
-                    <p class="aboutus-text-p">We offer our customer for property insurance for their better life.</p>
+                <div class="carousel-button carousel-button--right">
+                    <button class="carousel_btn--right"><img src="img/icons8-forward-100.png" alt="arrow-right"></button>
                 </div>
             </div>
         </div>
@@ -170,7 +178,7 @@
 
     <!-- body middle 1 -->
 
-    <section class="section-body find-home">
+    <section class="section-body find-home" id="section-service">
         <div class="container-body grid-three-column">
             <h2 class="about-f">Write Your Life Find Your Home.</h2>
             <div class="home-img-1">
@@ -199,7 +207,7 @@
 
     <section class="section-body comfort">
         <div class="comfort-container">
-            <div class="comfort-img">
+            <div class="comfort-img from-left slide-in">
                 <img src="img/house4.png" alt="house-4" class="comfort-house-1">
                 <!-- animate play button -->
                 <div class="play-button">
@@ -207,7 +215,7 @@
                 </div>
                 <img src="img/house5.png" alt="house-5" class="comfort-house-2">
             </div>
-            <div class="comfort-text">
+            <div class="comfort-text from-right slide-in">
                 <h2 class="comfort-head">Comfort Is Our Top Priority For You.</h2>
                 <p class="comfort-para">Vivamus sed pulvinar diam. Nullam laoreet mollis. Aliquam pharetra arcu vel
                     magna semper</p>
@@ -272,10 +280,8 @@
             <div class="tes-card-container">
                 <div class="tes-card">
                     <div class="tes-content">
-                        <p class="about-p tes-p">“Excellent work, through nine years of managing my house as a
-                            rental and
-                            in recently selling.
-                            Rolf and Partners Reall Estate have proven through, informed and responsive. My highest
+                        <p class="about-p tes-p">“Excellent work, through nine years of managing my house as a rental and in recently
+                            selling. Rolf and Partners Reall Estate have proven through, informed and responsive. My highest
                             recommendation.”</p>
                         <div class="customer-container">
                             <img src="img/vincent.png" alt="customer photo" class="tes-img">
@@ -288,8 +294,8 @@
                 </div>
                 <div class="tes-card">
                     <div class="tes-content">
-                        <p class="about-p tes-p">“The best!!”<br>“Great work, as both property managers and one
-                            the sole; I would recommend Partners Real Estate to Others....”
+                        <p class="about-p tes-p">“The best!!”<br>“Great work, as both property managers and one the sole; I would recommend
+                            Partners Real Estate to Others....”
                         </p>
                         <div class="customer-container">
                             <img src="img/john.png" alt="customer photo" class="tes-img">
@@ -347,6 +353,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- javascript files -->
+    <script src="js/index.js"></script>
 </body>
 
 </html>

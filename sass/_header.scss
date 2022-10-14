@@ -1,5 +1,13 @@
 @use '_var.scss' as var;
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+
 .logo-text {
     font-weight: 700;
     font-size: 2rem;
@@ -23,6 +31,11 @@
         font-weight: 600;
         color: var.$a-active;
     }
+
+    &:hover {
+        font-weight: 600;
+        color: var.$a-active;
+    }
 }
 
 .header-btn {
@@ -36,12 +49,12 @@
     justify-content: space-between;
     align-items: center;
     background-color: var.$header-bg;
-    padding: 2rem 9.375vw 0;
+    padding: 2rem 9.375vw;
 }
 
 .hero-section {
     background-color: var.$header-bg;
-    padding-top: 5.25rem;
+    padding-top: 10.125rem;
     padding-left: 9.375vw;
 }
 
@@ -55,6 +68,10 @@
 
 .hero-bg {
     grid-area: 1 / 2 / 3 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
 }
 
 .hero-bar {
@@ -65,17 +82,19 @@
     display: grid;
     grid-template-columns: 1.5fr 0.5fr;
     grid-template-rows: 1.1fr 0.9fr;
-    gap: 4.063rem 0px;
     grid-auto-flow: row;
     grid-area: 1 / 1 / 2 / 3;
+    margin-bottom: 10vw;
 }
 
 .hero-num {
     grid-area: 2 / 1 / 3 / 2;
+    padding-top: 4.514vw;
 }
 
 .hero-title {
     grid-area: 1 / 1 / -1 / -1;
+    z-index: 2;
 }
 
 .hero-desc {
@@ -103,13 +122,13 @@
     background-color: var.$btn-text;
     border-radius: 0.563rem;
     box-shadow: 0px 1.25rem 4.375rem rgba(0, 0, 0, 0.08);
+    z-index: 2;
 }
 
 .hero-bar-container {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
-    padding: 3.188rem 4.375rem 2.25rem;
+    padding: 3.188rem 4.861vw 2.25rem;
 }
 
 .bar-item-name {
@@ -121,7 +140,7 @@
 }
 
 .bar-item {
-    padding: 0 65px;
+    padding: 0 4.514vw;
     border-right: 0.094rem solid black;
 
     &:first-child {
@@ -146,7 +165,7 @@
 
 .select {
     position: relative;
-    min-width: 155px;
+    min-width: fit-content;
 
     svg {
         position: absolute;

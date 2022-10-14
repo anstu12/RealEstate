@@ -1,6 +1,7 @@
 @use '_var.scss' as var;
 
-.section-aboutus {
+.section-aboutus,
+.section-body {
     margin: 10.625rem 9.375vw 0;
 }
 
@@ -14,18 +15,13 @@
     grid-auto-flow: row;
 }
 
-@mixin scalable-grid($columns, $rows, $width) {
-    height: $rows * $width / $columns;
-    grid-gap: 0;
-}
-
 .aboutus-left {
     display: grid;
     grid-template-columns: 1.5fr 1fr 0.5fr;
     grid-template-rows: 0.5fr 2.1fr 0.4fr;
     grid-auto-flow: row;
     grid-area: 1 / 1 / 4 / 2;
-    @include scalable-grid(3, 3, 70vw);
+    min-height: fit-content;
 }
 
 .aboutus-h {
@@ -119,10 +115,10 @@
 
 .home-types {
     list-style: none;
-    gap: 3.375rem;
+    gap: 3.75vw;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid var.$bottom-boder-clr;
@@ -164,13 +160,11 @@
 
 .container-body {
     display: grid;
-    margin: 10.625rem 9.375vw 0;
 }
 
 // body comfort
 
 .comfort-container {
-    margin: 10.625rem 9.375vw 0;
     display: flex;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
@@ -245,10 +239,232 @@
 .comfort-btn {
     max-width: fit-content;
     font-size: 1.125rem;
+    padding: 10px 17px;
 }
 
 .comfort-para {
     font-size: 1.125rem;
     line-height: 1.67;
     padding-bottom: 2.75rem;
+}
+
+// body bottom live who you are
+
+.container-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+}
+
+.live-btn {
+    font-size: 1.125rem;
+    padding: 9px 20px;
+}
+
+.live-head {
+    font-weight: 600;
+    color: var.$h1;
+}
+
+.container-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1.25rem 4.375rem rgba(0, 0, 0, 0.08);
+    border-radius: 9px;
+    padding: 1rem;
+    background: rgb(243, 245, 247);
+    background: linear-gradient(0deg, rgba(243, 245, 247, 1) 50%, rgba(59, 92, 238, 1) 100%);
+    overflow: hidden;
+    transition: transform 500ms ease;
+
+    &.cards:hover {
+        transform: scale(1.05);
+
+        .card-content {
+            transform: translateY(0);
+        }
+
+        .card-title::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.hotel-resort {
+    border-radius: 9px;
+    padding-bottom: 1.25rem;
+}
+
+.hotel-title {
+    color: var.$h1;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding-bottom: 0.3rem;
+    position: relative;
+    width: max-content;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: calc(100% + 1rem);
+        left: calc(1rem * -1);
+        bottom: 0;
+        background: var.$link-hov-act;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 500ms ease;
+    }
+}
+
+.card-content {
+    transform: translateY(55%);
+    transition: transform 500ms ease;
+}
+
+.hotel-add {
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+}
+
+.hotel-price {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var.$price;
+    text-align: right;
+}
+
+// testimonial
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-hea {
+    max-inline-size: 18ch;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.tes-card-container {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.tes-card {
+    max-width: 48%;
+    box-shadow: 0px 20px 70px 0px var.$box-shadow;
+    border-radius: 1rem;
+}
+
+.tes-content {
+    padding: 2rem;
+}
+
+.tes-p,
+.tes-p2 {
+    font-size: 1.063rem;
+}
+
+.customer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.customer-name {
+    color: var.$h1;
+    padding-bottom: 0.5rem;
+}
+
+.tes-name {
+    padding-left: 1rem;
+}
+
+.tes-img {
+    max-width: 5.069vw;
+    max-height: 5.069vw;
+}
+
+// consulation
+.get-house-container {
+    background-color: var.$arrowdown1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.consult-h {
+    color: var.$btn-text;
+    font-size: 2.25rem;
+    padding-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.consult-p {
+    color: var.$consult-p-color;
+    line-height: 1.9;
+    padding-bottom: 2.5rem;
+}
+
+.consult-btn {
+    color: var.$arrowdown1;
+    background-color: var.$btn-text;
+    font-size: 1rem;
+    line-height: 1.625;
+    padding: 10px 20px;
+}
+
+// i dont know if this is correct way or not
+
+.dream-house-text {
+    font-family: 'Inter';
+    padding: 3.75rem 3.875rem;
+}
+
+.dream-house-img {
+    width: 60%;
+}
+
+// text should not go beyond titll
+
+//animation fade in
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+
+    &.appear {
+        opacity: 1;
+    }
+}
+
+.from-left {
+    transform: translate(-50%);
+}
+
+.from-right {
+    transform: translate(50%);
+}
+
+.from-left,
+.from-right {
+    opacity: 0;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+
+    &.appear {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
